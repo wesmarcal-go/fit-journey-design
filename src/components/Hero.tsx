@@ -13,13 +13,6 @@ const Hero: React.FC = () => {
     <section 
       id="inicio" 
       className="relative min-h-screen flex items-center pt-20"
-      style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                    url('https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "repeat",
-      }}
     >
       <div className="trainer-container flex flex-col md:flex-row items-center justify-between">
         <div className="max-w-xl z-10 mb-10 md:mb-0">
@@ -32,7 +25,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 
-            className={`text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight opacity-0 ${
+            className={`text-4xl md:text-6xl font-extrabold text-trainer-black mb-6 leading-tight opacity-0 ${
               isLoaded ? "animate-fade-in delay-100" : ""
             }`}
           >
@@ -40,7 +33,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p 
-            className={`text-lg md:text-xl text-gray-200 mb-8 opacity-0 ${
+            className={`text-lg md:text-xl text-gray-700 mb-8 opacity-0 ${
               isLoaded ? "animate-fade-in delay-200" : ""
             }`}
           >
@@ -103,7 +96,7 @@ const Hero: React.FC = () => {
             viewBox="0 0 24 24" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
-            className="text-white"
+            className="text-trainer-black"
           >
             <path 
               d="M12 5L12 19M12 19L19 12M12 19L5 12" 
