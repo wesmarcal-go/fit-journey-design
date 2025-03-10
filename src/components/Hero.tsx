@@ -14,13 +14,21 @@ const Hero: React.FC = () => {
       id="inicio" 
       className="relative min-h-screen flex items-center pt-20"
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')`,
+        background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "repeat",
       }}
     >
-      <div className="trainer-container">
-        <div className="max-w-3xl">
+      <div className="absolute top-0 left-0 w-full h-full opacity-20" 
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      ></div>
+
+      <div className="trainer-container flex flex-col md:flex-row items-center justify-between">
+        <div className="max-w-xl z-10 mb-10 md:mb-0">
           <div 
             className={`opacity-0 ${isLoaded ? "animate-fade-in" : ""}`}
           >
@@ -65,6 +73,30 @@ const Hero: React.FC = () => {
             >
               <span>Ver serviços</span>
             </a>
+          </div>
+        </div>
+        
+        <div 
+          className={`relative md:w-1/2 flex justify-center opacity-0 ${
+            isLoaded ? "animate-fade-in delay-400" : ""
+          }`}
+        >
+          <div className="relative">
+            <img 
+              src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+              alt="Personal Trainer" 
+              className="w-auto h-[500px] object-cover object-center rounded-lg z-10 relative"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-trainer-yellow/30 to-transparent rounded-lg"></div>
+            
+            <div className="absolute -bottom-6 -left-6 right-12 py-4 px-6 bg-black/80 backdrop-blur-sm border border-trainer-yellow/30 rounded-lg z-20">
+              <div className="flex items-center space-x-2">
+                <div className="h-1 w-6 bg-trainer-yellow"></div>
+                <p className="text-trainer-yellow text-sm font-bold">SEU TREINADOR</p>
+              </div>
+              <h3 className="text-white text-xl font-bold mt-1">Carlos Silva</h3>
+              <p className="text-gray-300 text-sm">CREF: 123456-G/SP • Especialista em Transformação Corporal</p>
+            </div>
           </div>
         </div>
       </div>
