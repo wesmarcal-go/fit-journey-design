@@ -14,7 +14,10 @@ const Hero: React.FC = () => {
       id="inicio" 
       className="relative min-h-screen flex items-center pt-20"
       style={{
-        background: "linear-gradient(45deg, #3551a4, #31cdb0)",
+        background: `linear-gradient(45deg, #3551a4, #31cdb0), url('/lovable-uploads/af44f450-ce95-407f-8d34-befdbe6e41c7.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay"
       }}
     >
       <div className="trainer-container flex flex-col md:flex-row items-center justify-between">
