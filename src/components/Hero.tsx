@@ -13,15 +13,29 @@ const Hero: React.FC = () => {
     <section 
       id="inicio" 
       className="relative min-h-screen flex items-center pt-20"
-      style={{
-        background: `linear-gradient(45deg, #3551a4, #31cdb0), url('/lovable-uploads/adfb0dac-0570-48ba-a87e-82fa41b27a1d.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        backgroundBlendMode: "overlay"
-      }}
     >
-      <div className="trainer-container flex flex-col md:flex-row items-center justify-between">
+      {/* Background Layer */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('/lovable-uploads/adfb0dac-0570-48ba-a87e-82fa41b27a1d.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></div>
+      
+      {/* Gradient Overlay */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          background: "linear-gradient(45deg, #3551a4, #31cdb0)",
+          opacity: 0.85,
+          mixBlendMode: "overlay",
+        }}
+      ></div>
+      
+      <div className="trainer-container flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="max-w-xl z-10 mb-10 md:mb-0">
           <div 
             className={`opacity-0 ${isLoaded ? "animate-fade-in" : ""}`}
@@ -95,7 +109,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce z-10">
         <a href="#sobre" aria-label="Rolar para baixo">
           <svg 
             width="24" 
