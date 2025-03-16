@@ -13,6 +13,9 @@ const Hero: React.FC = () => {
     <section 
       id="inicio" 
       className="relative min-h-screen flex items-center pt-20"
+      style={{
+        background: "linear-gradient(45deg, #0EA5E9, #22c55e)",
+      }}
     >
       <div className="trainer-container flex flex-col md:flex-row items-center justify-between">
         <div className="max-w-xl z-10 mb-10 md:mb-0">
@@ -25,7 +28,7 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 
-            className={`text-4xl md:text-6xl font-extrabold text-trainer-black mb-6 leading-tight opacity-0 ${
+            className={`text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight opacity-0 ${
               isLoaded ? "animate-fade-in delay-100" : ""
             }`}
           >
@@ -33,7 +36,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p 
-            className={`text-lg md:text-xl text-gray-700 mb-8 opacity-0 ${
+            className={`text-lg md:text-xl text-white mb-8 opacity-0 ${
               isLoaded ? "animate-fade-in delay-200" : ""
             }`}
           >
@@ -96,7 +99,7 @@ const Hero: React.FC = () => {
             viewBox="0 0 24 24" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
-            className="text-trainer-black"
+            className="text-white"
           >
             <path 
               d="M12 5L12 19M12 19L19 12M12 19L5 12" 
