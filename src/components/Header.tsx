@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -18,14 +17,20 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-3 bg-white shadow-md" : "py-5 bg-transparent"
+        scrolled ? "py-2 bg-white shadow-md" : "py-5 bg-transparent"
       }`}
     >
-      <div className="trainer-container flex items-center justify-between">
-        <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-trainer-black">
-            <span className="text-trainer-yellow">FIT</span>TRAINER
-          </h1>
+      <div className="trainer-container flex items-center md:justify-between">
+        <div className="flex-1 md:flex-initial flex items-center justify-center md:justify-start">
+          <a href="#inicio">
+            <img 
+              src="/images/logo-dhes.svg" 
+              alt="FitTrainer Logo" 
+              className={`transition-all duration-300 w-auto ${
+                scrolled ? "h-16 md:h-20 brightness-0" : "h-24 md:h-32"
+              }`}
+            />
+          </a>
         </div>
 
         {/* Desktop Navigation */}
