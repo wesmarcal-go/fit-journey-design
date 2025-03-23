@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p 
-            className={`text-base md:text-lg lg:text-xl text-white mb-6 md:mb-8 opacity-0 ${
+            className={`text-base md:text-lg lg:text-xl text-white mb-6 md:mb-8 opacity-0 text-shadow-diffuse ${
               isLoaded ? "animate-fade-in delay-200" : ""
             }`}
           >

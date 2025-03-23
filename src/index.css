@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -96,6 +95,10 @@
 
   .futuristic-caption {
     @apply bg-black/80 backdrop-blur-sm border border-trainer-yellow/30 rounded-lg p-4 shadow-glow;
+  }
+  
+  .text-shadow-diffuse {
+    text-shadow: 0 0 8px rgba(0,0,0,0.8), 0 0 12px rgba(0,0,0,0.6), 0 0 16px rgba(0,0,0,0.4);
   }
 }
 
