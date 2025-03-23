@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -27,7 +28,7 @@ const Header: React.FC = () => {
               src="/images/logo-dhes.svg" 
               alt="FitTrainer Logo" 
               className={`transition-all duration-300 w-auto ${
-                scrolled ? "h-16 md:h-20 brightness-0" : "h-24 md:h-32"
+                scrolled ? "h-12 md:h-14 brightness-0" : "h-16 md:h-20"
               }`}
             />
           </a>
@@ -37,25 +38,33 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <a 
             href="#inicio" 
-            className="font-medium text-trainer-black hover:text-trainer-yellow transition-colors"
+            className={`font-medium hover:text-trainer-yellow transition-colors ${
+              scrolled ? "text-trainer-black" : "text-white"
+            }`}
           >
             Início
           </a>
           <a 
             href="#sobre" 
-            className="font-medium text-trainer-black hover:text-trainer-yellow transition-colors"
+            className={`font-medium hover:text-trainer-yellow transition-colors ${
+              scrolled ? "text-trainer-black" : "text-white"
+            }`}
           >
             Sobre
           </a>
           <a 
             href="#servicos" 
-            className="font-medium text-trainer-black hover:text-trainer-yellow transition-colors"
+            className={`font-medium hover:text-trainer-yellow transition-colors ${
+              scrolled ? "text-trainer-black" : "text-white"
+            }`}
           >
             Serviços
           </a>
           <a 
             href="#depoimentos" 
-            className="font-medium text-trainer-black hover:text-trainer-yellow transition-colors"
+            className={`font-medium hover:text-trainer-yellow transition-colors ${
+              scrolled ? "text-trainer-black" : "text-white"
+            }`}
           >
             Depoimentos
           </a>
@@ -69,7 +78,9 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden flex items-center text-trainer-black z-50"
+          className={`md:hidden flex items-center z-50 ${
+            scrolled ? "text-trainer-black" : "text-white"
+          }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
