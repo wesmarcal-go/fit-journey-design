@@ -32,8 +32,8 @@ const Hero: React.FC = () => {
             <span className="bg-black/80 px-2 py-1 inline-block">
               Treinos que geram
             </span>
-            <br/>
-            <span className="bg-black/80 px-2 py-1 text-trainer-yellow inline-block mt-2">
+            <br className="md:block"/>
+            <span className="bg-black/80 px-2 py-1 text-trainer-yellow inline-block mt-0 md:mt-2">
               RESULTADOS
             </span>
           </h1>
