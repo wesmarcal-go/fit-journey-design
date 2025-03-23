@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -28,8 +29,13 @@ const Hero: React.FC = () => {
               isLoaded ? "animate-fade-in delay-100" : ""
             }`}
           >
-            <span className="bg-black/80 px-2 py-1 box-decoration-clone">
-              Treinos que geram <span className="text-trainer-yellow">RESULTADOS</span></span>
+            <span className="bg-black/80 px-2 py-1 inline-block">
+              Treinos que geram
+            </span>
+            <br/>
+            <span className="bg-black/80 px-2 py-1 text-trainer-yellow inline-block mt-2">
+              RESULTADOS
+            </span>
           </h1>
           
           <p 
