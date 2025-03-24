@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -24,6 +23,13 @@ const Hero: React.FC = () => {
       
       <div className="trainer-container flex flex-col md:flex-row items-start justify-between relative z-10 w-full mt-[70px]">
         <div className="max-w-xl z-10 mb-8 md:mb-0 text-center md:text-left">
+          <span 
+            className={`inline-block bg-trainer-black text-trainer-yellow px-4 py-2 rounded-md text-sm md:text-base font-bold mb-4 opacity-0 ${
+              isLoaded ? "animate-fade-in" : ""
+            }`}
+          >
+            DO INICIANTE AO AVANÇADO
+          </span>
           <h1 
             className={`text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-tight opacity-0 ${
               isLoaded ? "animate-fade-in delay-100" : ""
@@ -32,8 +38,8 @@ const Hero: React.FC = () => {
             <span className="bg-black/80 px-2 py-1 inline-block">
               Treinos que geram
             </span>
-            <br className="md:block"/>
-            <span className="bg-black/80 px-2 py-1 text-trainer-yellow inline-block mt-0 md:mt-2">
+            <br className="hidden md:block"/>
+            <span className="bg-black/80 px-2 py-1 text-trainer-yellow inline-block md:mt-2">
               RESULTADOS
             </span>
           </h1>
