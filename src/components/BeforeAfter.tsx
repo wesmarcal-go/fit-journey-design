@@ -70,7 +70,7 @@ const BeforeAfter: React.FC = () => {
   }, []);
 
   return (
-    <section id="transformacoes" className="section-padding mt-[250px]">
+    <section id="transformacoes" className="section-padding mt-6">
       <div className="trainer-container">
         <div className="text-center mb-12">
           <h2 className={`section-title opacity-0 ${isLoaded ? "animate-fade-in delay-100" : ""}`}>
