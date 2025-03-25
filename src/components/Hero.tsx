@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       ></div>
       
       <div className="trainer-container flex flex-col md:flex-row items-start justify-between relative z-10 w-full mt-[70px]">
-        <div className="max-w-xl z-10 mb-8 md:mb-0 md:mt-[15%] text-center md:text-left">
+        <div className="max-w-xl z-10 mb-8 md:mb-0 text-center md:text-left">
           <div className={`flex items-center mb-6 opacity-0 ${isLoaded ? "animate-fade-in" : ""}`}>
             <div className="flex -space-x-4">
               <img
