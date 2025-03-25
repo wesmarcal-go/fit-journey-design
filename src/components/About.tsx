@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
 
@@ -59,7 +58,7 @@ const About: React.FC = () => {
               <img
                 src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                 alt="Personal Trainer"
-                className="w-full h-auto object-cover"
+                className="w-4/5 h-auto object-cover mx-auto"
               />
             </div>
             <div 

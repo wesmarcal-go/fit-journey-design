@@ -12,7 +12,22 @@ interface TestimonialsProps {
 const Testimonials: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    dragFree: true
+  });
+
+  useEffect(() => {
+    if (emblaApi) {
+      const autoplayInterval = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 3000); // Move every 3 seconds
+
+      return () => {
+        clearInterval(autoplayInterval);
+      };
+    }
+  }, [emblaApi]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,22 +51,38 @@ const Testimonials: React.FC = () => {
 
   const testimonials = [
     {
-      src: "/testimonials/testimonial1.jpg",
-      alt: "Depoimento 1 - Conversa no Instagram"
+      src: "/images/cases/case01.jpg",
+      alt: "Caso de Sucesso 1 - Transformação"
     },
     {
-      src: "/testimonials/testimonial2.jpg",
-      alt: "Depoimento 2 - Conversa no Instagram"
+      src: "/images/cases/case02.jpg",
+      alt: "Caso de Sucesso 2 - Transformação"
     },
     {
-      src: "/testimonials/testimonial3.jpg",
-      alt: "Depoimento 3 - Conversa no Instagram"
+      src: "/images/cases/case03.jpg",
+      alt: "Caso de Sucesso 3 - Transformação"
+    },
+    {
+      src: "/images/cases/case04.jpg",
+      alt: "Caso de Sucesso 4 - Transformação"
+    },
+    {
+      src: "/images/cases/case05.jpg",
+      alt: "Caso de Sucesso 5 - Transformação"
+    },
+    {
+      src: "/images/cases/case06.jpg",
+      alt: "Caso de Sucesso 6 - Transformação"
+    },
+    {
+      src: "/images/cases/case07.jpg",
+      alt: "Caso de Sucesso 7 - Transformação"
     }
   ];
 
   return (
-    <section id="depoimentos" ref={sectionRef} className="section-padding bg-trainer-white">
-      <div className="trainer-container">
+    <section id="depoimentos" ref={sectionRef} className="section-padding bg-trainer-white w-full overflow-hidden">
+      <div className="w-full">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div 
             className={`inline-block bg-trainer-yellow px-4 py-1 mb-4 rounded opacity-0 ${
@@ -84,11 +115,11 @@ const Testimonials: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <div 
                   key={index}
-                  className={`flex-[0_0_300px] opacity-0 ${
+                  className={`flex-[0_0_280px] md:flex-[0_0_320px] opacity-0 ${
                     isVisible ? `animate-fade-in delay-${(index + 3) * 100}` : ""
                   }`}
                 >
-                  <div className="aspect-[9/16] w-full max-w-[300px] mx-auto">
+                  <div className="aspect-[3/4] w-full max-w-[280px] md:max-w-[320px] mx-auto">
                     <img
                       src={testimonial.src}
                       alt={testimonial.alt}

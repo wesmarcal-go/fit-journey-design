@@ -7,8 +7,6 @@ import Services from "../components/Services";
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
-import BeforeAfter from "../components/BeforeAfter";
-
 const Index = () => {
   // Smooth scroll for anchor links
   useEffect(() => {
@@ -41,10 +39,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <BeforeAfter />
+        <Testimonials />
         <About />
         <Services />
-        <Testimonials />
         <CallToAction />
       </main>
       <Footer />

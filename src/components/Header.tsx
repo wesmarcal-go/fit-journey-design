@@ -32,7 +32,10 @@ const Header: React.FC = () => {
           <a href="#depoimentos" className={`font-medium hover:text-trainer-yellow transition-colors ${scrolled ? "text-trainer-black" : "text-white"}`}>
             Depoimentos
           </a>
-          <a href="#contato" className="btn-primary animate-pulse-button">Falar agora!</a>
+          <a href="#contato" className="btn-primary animate-pulse-button flex items-center gap-2">
+            <img src="/images/zap.svg" alt="WhatsApp" className="w-5 h-5" />
+            Quero começar!
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -56,7 +59,8 @@ const Header: React.FC = () => {
           <a href="#depoimentos" className="font-bold text-xl text-trainer-white hover:text-trainer-yellow transition-colors" onClick={() => setIsMenuOpen(false)}>
             Depoimentos
           </a>
-          <a href="#contato" className="mt-6 bg-trainer-yellow text-trainer-black font-bold py-3 px-8 rounded-md" onClick={() => setIsMenuOpen(false)}>
+          <a href="#contato" className="mt-6 bg-trainer-yellow text-trainer-black font-bold py-3 px-8 rounded-md flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+            <img src="/images/zap.svg" alt="WhatsApp" className="w-5 h-5" />
             Agendar Consulta
           </a>
         </nav>

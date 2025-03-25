@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+
 const CallToAction: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -37,8 +37,9 @@ const CallToAction: React.FC = () => {
           
           <div className={`flex flex-col sm:flex-row justify-center gap-4 opacity-0 ${isVisible ? "animate-fade-in delay-200" : ""}`}>
             <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" className="btn-secondary group flex items-center justify-center gap-2 text-lg py-4 px-8">
-              <span>Agendar Consulta</span>
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              
+              <img src="/images/zap-white.png" alt="WhatsApp" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span>Quero começar!</span>
             </a>
           </div>
           
