@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
@@ -53,7 +54,7 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 
-            className={`text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-tight opacity-0 ${
+            className={`text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-tight opacity-0 ${
               isLoaded ? "animate-fade-in delay-100" : ""
             }`}
           >
