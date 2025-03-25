@@ -23,13 +23,35 @@ const Hero: React.FC = () => {
       
       <div className="trainer-container flex flex-col md:flex-row items-start justify-between relative z-10 w-full mt-[70px]">
         <div className="max-w-xl z-10 mb-8 md:mb-0 text-center md:text-left">
-          <span 
-            className={`inline-block bg-trainer-black text-trainer-yellow px-4 py-2 rounded-md text-sm md:text-base font-bold mb-4 opacity-0 ${
-              isLoaded ? "animate-fade-in" : ""
-            }`}
-          >
-            DO INICIANTE AO AVANÇADO
-          </span>
+          <div className={`flex items-center mb-6 opacity-0 ${isLoaded ? "animate-fade-in" : ""}`}>
+            <div className="flex -space-x-4">
+              <img
+                className="w-12 h-12 rounded-full border-2 border-white"
+                src="/images/avatar-1.png"
+                alt="Avatar 1"
+              />
+              <img
+                className="w-12 h-12 rounded-full border-2 border-white"
+                src="/images/avatar-2.png"
+                alt="Avatar 2"
+              />
+              <img
+                className="w-12 h-12 rounded-full border-2 border-white"
+                src="/images/avatar-3.png"
+                alt="Avatar 3"
+              />
+              <img
+                className="w-12 h-12 rounded-full border-2 border-white"
+                src="/images/avatar-4.png"
+                alt="Avatar 4"
+              />
+            </div>
+            <div className="ml-4">
+              <p className="text-white text-2xl font-bold">+ de 1500</p>
+              <p className="text-white text-sm">vidas transformadas</p>
+            </div>
+          </div>
+
           <h1 
             className={`text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 md:mb-6 leading-tight opacity-0 ${
               isLoaded ? "animate-fade-in delay-100" : ""
