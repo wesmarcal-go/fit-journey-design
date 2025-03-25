@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           
           <div className={`flex justify-center md:justify-start opacity-0 ${isLoaded ? "animate-fade-in delay-300" : ""}`}>
             <a href="#contato" className="btn-primary flex items-center justify-center gap-2 animate-pulse-button w-full sm:w-auto px-8">
-              <span>Quero saber mais!</span>
+              <span className="text-lg">Quero saber mais!</span>
               <ArrowRight size={18} />
             </a>
           </div>
